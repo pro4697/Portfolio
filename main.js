@@ -19,9 +19,20 @@ navbarMenu.addEventListener('click', () => {
     return;
   }
   const id = document.querySelector(link);
-  //scrollTo.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  //id.scrollIntoView({ behavior: 'smooth', block: 'start' });
   window.scrollTo({
     top: id.getBoundingClientRect().top + window.pageYOffset - 65,
     behavior: 'smooth',
   });
 });
+
+// Handle click on "contact me" button on home
+const honeContactBtn = document.querySelector('.home__contact');
+honeContactBtn.addEventListener('click', () => {
+  scrollIntoView('#contact');
+});
+
+function scrollIntoView(selector) {
+  const scrollTo = document.querySelector(selector);
+  scrollTo.scrollIntoView({ behavior: 'smooth' });
+}
