@@ -125,6 +125,7 @@ p {
 }
 
 .navbar__menu__item {
+  user-select: none;
   padding: 8px 12px;
   margin: 0 4px;
   cursor: pointer;
