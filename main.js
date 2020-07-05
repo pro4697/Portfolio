@@ -63,8 +63,15 @@ workBtnContainer.addEventListener('click', (e) => {
     return;
   }
 
-  projectContainer.classList.add('anim-out');
+  //Remove selection from the previous item and select the new one
+  const active = document.querySelector('.category__btn.selected');
+  active.classList.remove('selected');
+  //버튼내의 숫자를 클릭시 예외처리 (숫자를 클릭시 부모노드를 가져옴)
+  const target =
+    e.target.nodeName === 'BUTTON' ? e.target : e.target.parentNode;
+  target.classList.add('selected');
 
+  projectContainer.classList.add('anim-out');
   setTimeout(() => {
     projects.forEach((project) => {
       if (
