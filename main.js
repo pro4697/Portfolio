@@ -9,6 +9,7 @@ document.addEventListener('scroll', () => {
   } else {
     navbar.classList.remove('navbar__color');
   }
+  navbarMenu.classList.remove('open');
 });
 
 // Handle scrolling when tapping on the navbar menu
@@ -18,12 +19,22 @@ navbarMenu.addEventListener('click', () => {
   if (link == null) {
     return;
   }
+  navbarMenu.classList.remove('open');
   const id = document.querySelector(link);
   //id.scrollIntoView({ behavior: 'smooth', block: 'start' });
   window.scrollTo({
     top: id.getBoundingClientRect().top + window.pageYOffset - 65,
     behavior: 'smooth',
   });
+});
+
+// Navbar toggle button for small screen
+const toggleBtn = document.querySelector('.navbar__toggle-btn');
+toggleBtn.addEventListener('click', () => {
+  navbarMenu.classList.toggle('open');
+  if (window.scrollY < navbarHeight) {
+    //navbar.classList.toggle('navbar__color');
+  }
 });
 
 // Handle click on "contact me" button on home
