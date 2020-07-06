@@ -23,7 +23,7 @@ navbarMenu.addEventListener('click', () => {
   const id = document.querySelector(link);
   //id.scrollIntoView({ behavior: 'smooth', block: 'start' });
   window.scrollTo({
-    top: id.getBoundingClientRect().top + window.pageYOffset - 65,
+    top: id.getBoundingClientRect().top + window.pageYOffset - 50,
     behavior: 'smooth',
   });
 });
