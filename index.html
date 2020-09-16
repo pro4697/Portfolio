@@ -35,9 +35,9 @@
         <li class="navbar__menu__item" data-link="#about">About</li>
         <li class="navbar__menu__item" data-link="#skills">Skills</li>
         <li class="navbar__menu__item" data-link="#work">My work</li>
-        <li class="navbar__menu__item" data-link="#testimonials">
+        <!-- <li class="navbar__menu__item" data-link="#testimonials">
           Testimonial
-        </li>
+        </li> -->
         <li class="navbar__menu__item" data-link="#contact">Contact</li>
       </ul>
 
@@ -73,7 +73,7 @@
             <i class="fab fa-html5"></i>
           </div>
           <div class="major__title">Front-end</div>
-          <div class="major__description">HTMl, CSS JavaScript, React</div>
+          <div class="major__description">HTMl, CSS, JavaScript, React.js</div>
         </div>
         <div class="major">
           <div class="major__icon">
@@ -92,7 +92,7 @@
       </div>
 
       <!-- 경력 란 -->
-      <div class="about__jobs">
+      <!-- <div class="about__jobs">
         <div class="job">
           <img src="imgs/logo-samsung.png" alt="samsung" class="job__logo" />
           <div class="job__description">
@@ -107,7 +107,7 @@
             <p class="job__period">2020 Sept - Until now</p>
           </div>
         </div>
-      </div>
+      </div> -->
     </section>
 
     <!-- Skills -->
@@ -115,9 +115,7 @@
       <div class="section__container">
         <h1>Skills</h1>
         <h2>Skills & Attributes</h2>
-        <p>
-          나의 장점 어필
-        </p>
+        <p>나의 장점 어필</p>
         <div class="skillset">
           <div class="skillset__left">
             <h3 class="skillset__title">Skills</h3>
@@ -127,7 +125,7 @@
                 <span>80%</span>
               </div>
               <div class="skill__bar">
-                <div class="skill__value" style="width: 80%;"></div>
+                <div class="skill__value" style="width: 80%"></div>
               </div>
             </div>
             <div class="skill">
@@ -136,7 +134,7 @@
                 <span>70%</span>
               </div>
               <div class="skill__bar">
-                <div class="skill__value" style="width: 70%;"></div>
+                <div class="skill__value" style="width: 70%"></div>
               </div>
             </div>
             <div class="skill">
@@ -145,25 +143,25 @@
                 <span>80%</span>
               </div>
               <div class="skill__bar">
-                <div class="skill__value" style="width: 80%;"></div>
+                <div class="skill__value" style="width: 80%"></div>
               </div>
             </div>
             <div class="skill">
               <div class="skill__description">
-                <span>React</span>
+                <span>React.js</span>
+                <span>70%</span>
+              </div>
+              <div class="skill__bar">
+                <div class="skill__value" style="width: 70%"></div>
+              </div>
+            </div>
+            <div class="skill">
+              <div class="skill__description">
+                <span>Node.js</span>
                 <span>30%</span>
               </div>
               <div class="skill__bar">
-                <div class="skill__value" style="width: 30%;"></div>
-              </div>
-            </div>
-            <div class="skill">
-              <div class="skill__description">
-                <span>NodeJS</span>
-                <span>10%</span>
-              </div>
-              <div class="skill__bar">
-                <div class="skill__value" style="width: 10%;"></div>
+                <div class="skill__value" style="width: 30%"></div>
               </div>
             </div>
           </div>
@@ -216,21 +214,40 @@
 
         <div class="work__projects">
           <a
+            href="https://foodticket.xyz"
+            class="project"
+            target="blank"
+            data-type="*"
+          >
+            <img
+              src="imgs/foodTicket_2.png"
+              alt="food_ticket"
+              class="project__img"
+            />
+            <div class="project__description">
+              <h3>Food Ticket</h3>
+              <span>
+                React.js, Node.js<br />
+                Express.js, MongoDB<br />
+                PG결제, QRcode reader
+              </span>
+            </div>
+          </a>
+          <a
             href="https://dong-afoodticket.000webhostapp.com/"
             class="project"
             target="blank"
             data-type="*"
           >
             <img
-              src="imgs/foodTicket.png"
+              src="imgs/foodTicket_1.png"
               alt="food_ticket"
               class="project__img"
             />
             <div class="project__description">
               <h3>모바일 식권 시스템</h3>
               <span>
-                HTML, CSS, JS, PHP, DB, Crawling,<br />Payment module, QRcode
-                reader
+                jQuery, PHP, DB, Crawling,<br />PG결제, QRcode reader
               </span>
             </div>
           </a>
@@ -243,21 +260,7 @@
             <img src="imgs/netflix.png" alt="Kflix" class="project__img" />
             <div class="project__description">
               <h3>K-flix</h3>
-              <span>
-                React, Movie_API
-              </span>
-            </div>
-          </a>
-          <a
-            href="https://pro4697.github.io/movie_app_2020/#/"
-            class="project"
-            target="blank"
-            data-type="front-end"
-          >
-            <img src="imgs/temp.png" alt="movie_app" class="project__img" />
-            <div class="project__description">
-              <h3>영화 평점 사이트</h3>
-              <span>Clone coding with React, Json</span>
+              <span> React, Movie_API </span>
             </div>
           </a>
         </div>
@@ -265,7 +268,7 @@
     </section>
 
     <!-- Testimonials -->
-    <section id="testimonials" class="section">
+    <!-- <section id="testimonials" class="section">
       <div class="section__container">
         <h1>Testimonials</h1>
         <h3>See what they say about me</h3>
@@ -298,8 +301,8 @@
           </div>
         </div>
       </div>
-    </section>
-    <!-- 실제 사용시엔 Testi빼고 토익 점수, 수상, 자격증 채워넣기-->
+    </section> -->
+    <!-- 실제 사용시엔 Testi빼고 토익 점수, 수상, 자격증 채워넣기 -->
 
     <!-- Contact -->
     <section id="contact" class="section">
@@ -310,9 +313,7 @@
           <i class="fab fa-github"></i>
         </a>
       </div>
-      <p class="contact__rights">
-        2020 Kichan - All rights reserved
-      </p>
+      <p class="contact__rights">2020 Kichan - All rights reserved</p>
     </section>
 
     <!-- Arrow up -->
