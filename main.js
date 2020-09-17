@@ -4,7 +4,7 @@
 const wl = [
   {
     name: 'Food Ticket',
-    href: 'https://foodticket.xyz',
+    url: 'https://foodticket.xyz',
     git: 'https://github.com/pro4697/Food-Ticket',
     type: '*',
     img: 'project_3.png',
@@ -13,7 +13,7 @@ const wl = [
   },
   {
     name: 'K-FLIX',
-    href: 'https://pro4697.github.io/netflix_app/',
+    url: 'https://pro4697.github.io/netflix_app/',
     git: 'https://github.com/pro4697/netflix_app',
     type: 'front-end',
     img: 'project_2.png',
@@ -21,7 +21,7 @@ const wl = [
   },
   {
     name: '모바일 식권 시스템',
-    href: 'https://dong-afoodticket.000webhostapp.com/',
+    url: 'https://dong-afoodticket.000webhostapp.com/',
     git: 'https://github.com/pro4697/Food_Ticket_jQuery',
     type: '*',
     img: 'project_1.png',
@@ -57,9 +57,11 @@ const wl = [
     html += `<a href="${wl[i].git}" target="_blank" class="project__git">`;
     html += '<i class="fab fa-github"></i>';
     html += '<span class="project__icon-name">github</span></a>';
-    html += `<a href="${wl[i].href}" target="_blank" class="project__demo">`;
-    html += '<span class="project__icon-name">preview</span>';
-    html += '<i class="fab fa-internet-explorer"></i></a>';
+    if (wl[i].url) {
+      html += `<a href="${wl[i].url}" target="_blank" class="project__demo">`;
+      html += '<span class="project__icon-name">preview</span>';
+      html += '<i class="fab fa-internet-explorer"></i></a>';
+    }
     html += '</div></div>';
   }
 
