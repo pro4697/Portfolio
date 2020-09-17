@@ -17,12 +17,8 @@
     />
     <link rel="stylesheet" href="style.css" />
     <script src="main.js" defer></script>
-    <!--css : font-family: 'Sunflower', sans-serif;-->
   </head>
-  <!-- Todo List
-  Testimonials빼고 토익 점수, 수상, 자격증 채워넣기
-  My Work pc화면에서 hover시 뜨는 정보 기본으로 하단 20%정도만 보이게
--->
+
   <body>
     <!-- Navigation -->
     <nav id="navbar">
@@ -122,15 +118,6 @@
             <div class="skill">
               <div class="skill__description">
                 <span>HTML</span>
-                <span>80%</span>
-              </div>
-              <div class="skill__bar">
-                <div class="skill__value" style="width: 80%"></div>
-              </div>
-            </div>
-            <div class="skill">
-              <div class="skill__description">
-                <span>CSS</span>
                 <span>70%</span>
               </div>
               <div class="skill__bar">
@@ -139,11 +126,20 @@
             </div>
             <div class="skill">
               <div class="skill__description">
-                <span>JavaScript</span>
-                <span>80%</span>
+                <span>CSS</span>
+                <span>60%</span>
               </div>
               <div class="skill__bar">
-                <div class="skill__value" style="width: 80%"></div>
+                <div class="skill__value" style="width: 60%"></div>
+              </div>
+            </div>
+            <div class="skill">
+              <div class="skill__description">
+                <span>JavaScript</span>
+                <span>70%</span>
+              </div>
+              <div class="skill__bar">
+                <div class="skill__value" style="width: 70%"></div>
               </div>
             </div>
             <div class="skill">
@@ -199,71 +195,20 @@
         <h3>Projects</h3>
         <div class="work__categories">
           <button class="category__btn selected" data-filter="*">
-            All<span class="category__count">2</span>
+            All<span class="category__count all"></span>
           </button>
           <button class="category__btn" data-filter="front-end">
-            Front-end<span class="category__count">2</span>
+            Front-end<span class="category__count front"></span>
           </button>
           <button class="category__btn" data-filter="back-end">
-            Back-end<span class="category__count">1</span>
+            Back-end<span class="category__count back"></span>
           </button>
           <!-- <button class="category__btn" data-filter="mobile">
             Mobile<span class="category__count">0</span>
           </button> -->
         </div>
 
-        <div class="work__projects">
-          <a
-            href="https://foodticket.xyz"
-            class="project"
-            target="blank"
-            data-type="*"
-          >
-            <img
-              src="imgs/project_1.png"
-              alt="food_ticket"
-              class="project__img"
-            />
-            <div class="project__description">
-              <h3>Food Ticket</h3>
-              <span>
-                React.js, Node.js<br />
-                Express.js, MongoDB<br />
-                PG결제, QRcode reader
-              </span>
-            </div>
-          </a>
-          <a
-            href="https://dong-afoodticket.000webhostapp.com/"
-            class="project"
-            target="blank"
-            data-type="*"
-          >
-            <img
-              src="imgs/project_2.png"
-              alt="food_ticket"
-              class="project__img"
-            />
-            <div class="project__description">
-              <h3>모바일 식권 시스템</h3>
-              <span>
-                jQuery, PHP, DB, Crawling,<br />PG결제, QRcode reader
-              </span>
-            </div>
-          </a>
-          <a
-            href="https://pro4697.github.io/netflix_app/"
-            class="project"
-            target="blank"
-            data-type="front-end"
-          >
-            <img src="imgs/project_3.png" alt="Kflix" class="project__img" />
-            <div class="project__description">
-              <h3>K-flix</h3>
-              <span> React, Movie_API </span>
-            </div>
-          </a>
-        </div>
+        <div class="work__projects"></div>
       </div>
     </section>
 
@@ -302,7 +247,6 @@
         </div>
       </div>
     </section> -->
-    <!-- 실제 사용시엔 Testi빼고 토익 점수, 수상, 자격증 채워넣기 -->
 
     <!-- Contact -->
     <section id="contact" class="section">

@@ -1,5 +1,74 @@
 'use strict';
 
+// work_list
+const wl = [
+  {
+    name: 'Food Ticket',
+    href: 'https://foodticket.xyz',
+    git: 'https://github.com/pro4697/Food-Ticket',
+    type: '*',
+    img: 'project_3.png',
+    description:
+      'React.js, Node.js, Express.js<br /> MongoDB, PG결제, QRcode reader',
+  },
+  {
+    name: 'K-FLIX',
+    href: 'https://pro4697.github.io/netflix_app/',
+    git: 'https://github.com/pro4697/netflix_app',
+    type: 'front-end',
+    img: 'project_2.png',
+    description: 'React.js, Movie_API',
+  },
+  {
+    name: '모바일 식권 시스템',
+    href: 'https://dong-afoodticket.000webhostapp.com/',
+    git: 'https://github.com/pro4697/Food_Ticket_jQuery',
+    type: '*',
+    img: 'project_1.png',
+    description:
+      'jQuery, PHP, phpMyAdmin, Crawling,<br />PG결제, QRcode reader',
+  },
+];
+
+(function () {
+  const work = document.querySelector('.work__projects');
+  const category = [
+    document.querySelector('.all'),
+    document.querySelector('.front'),
+    document.querySelector('.back'),
+  ];
+  let cnt = [wl.length, 0, 0];
+  let html = '';
+
+  for (let i = 0; i < wl.length; i++) {
+    if (wl[i].type === '*') {
+      cnt[1]++, cnt[2]++;
+    } else if (wl[i].type === 'front-end') {
+      cnt[1]++;
+    } else if (wl[i].type === 'back-end') {
+      cnt[2]++;
+    }
+
+    html += `<div class="project" target="blank" data-type="${wl[i].type}" >`;
+    html += `<img src="imgs/${wl[i].img}" alt="food_ticket" class="project__img" />`;
+    html += '<div class="project__description">';
+    html += `<h3>${wl[i].name}</h3>`;
+    html += `<span>${wl[i].description}</span>`;
+    html += `<a href="${wl[i].git}" target="_blank" class="project__git">`;
+    html += '<i class="fab fa-github"></i>';
+    html += '<span class="project__icon-name">github</span></a>';
+    html += `<a href="${wl[i].href}" target="_blank" class="project__demo">`;
+    html += '<span class="project__icon-name">preview</span>';
+    html += '<i class="fab fa-internet-explorer"></i></a>';
+    html += '</div></div>';
+  }
+
+  work.innerHTML = html;
+  for (let i = 0; i < category.length; i++) {
+    category[i].innerHTML = cnt[i];
+  }
+})();
+
 // Make navbar transparent when it is on the top
 const navbar = document.querySelector('#navbar');
 const navbarHeight = navbar.getBoundingClientRect().height;
