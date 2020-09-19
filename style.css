@@ -386,6 +386,7 @@ p {
 
 .project__description {
   position: absolute;
+  color: var(--color-white);
   background-color: black;
   display: flex;
   flex-direction: column;
