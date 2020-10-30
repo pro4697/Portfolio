@@ -31,6 +31,15 @@ const wl = [
 ];
 
 (function () {
+  if ((navigator.appName == 'Netscape' && navigator.userAgent.search('Trident') != -1)) { // IE
+    alert('Chrome 또는 Edge 사용을 권장드립니다.');
+    let item = document.querySelectorAll('.major__icon');
+    for (let i = 0; i < item.length; i++)
+      item[i].style.lineHeight = '190px';
+    document.querySelector('.work__categories').style.display = 'none';
+  }
+
+
   const work = document.querySelector('.work__projects');
   const category = [
     document.querySelector('.all'),
@@ -48,23 +57,38 @@ const wl = [
     } else if (wl[i].type === 'back-end') {
       cnt[2]++;
     }
-
-    html += `<div class="project" target="blank" data-type="${wl[i].type}" >`;
-    html += `<img src="imgs/${wl[i].img}" alt="food_ticket" class="project__img" />`;
+    //ES5
+    html += '<div class="project" target="blank" data-type="' + wl[i].type + '" >';
+    html += '<img src="imgs/' + wl[i].img + '" alt="" class="project__img" />';
     html += '<div class="project__description">';
-    html += `<h3>${wl[i].name}</h3>`;
-    html += `<span>${wl[i].description}</span>`;
-    html += `<a href="${wl[i].git}" target="_blank" class="project__git">`;
+    html += '<h3>' + wl[i].name + '</h3>';
+    html += '<span>' + wl[i].description + '</span>';
+    html += '<a href="' + wl[i].git + '" target="_blank" class="project__git">';
     html += '<i class="fab fa-github"></i>';
     html += '<span class="project__icon-name">github</span></a>';
     if (wl[i].url) {
-      html += `<a href="${wl[i].url}" target="_blank" class="project__demo">`;
+      html += '<a href="' + wl[i].url + '" target="_blank" class="project__demo">';
       html += '<span class="project__icon-name">preview</span>';
       html += '<i class="fab fa-internet-explorer"></i></a>';
     }
     html += '</div></div>';
-  }
 
+    //ES6
+    // html += `<div class="project" target="blank" data-type="${wl[i].type}" >`;
+    // html += `<img src="imgs/${wl[i].img}" alt="food_ticket" class="project__img" />`;
+    // html += '<div class="project__description">';
+    // html += `<h3>${wl[i].name}</h3>`;
+    // html += `<span>${wl[i].description}</span>`;
+    // html += `<a href="${wl[i].git}" target="_blank" class="project__git">`;
+    // html += '<i class="fab fa-github"></i>';
+    // html += '<span class="project__icon-name">github</span></a>';
+    // if (wl[i].url) {
+    //   html += `<a href="${wl[i].url}" target="_blank" class="project__demo">`;
+    //   html += '<span class="project__icon-name">preview</span>';
+    //   html += '<i class="fab fa-internet-explorer"></i></a>';
+    // }
+    // html += '</div></div>';
+  }
   work.innerHTML = html;
   for (let i = 0; i < category.length; i++) {
     category[i].innerHTML = cnt[i];
@@ -74,8 +98,8 @@ const wl = [
 // Make navbar transparent when it is on the top
 const navbar = document.querySelector('#navbar');
 const navbarHeight = navbar.getBoundingClientRect().height;
-document.addEventListener('scroll', () => {
-  if (window.scrollY > navbarHeight) {
+document.addEventListener('scroll', function () {
+  if ((window.scrollY || window.pageYOffset) > navbarHeight) {
     navbar.classList.add('navbar__color');
   } else {
     navbar.classList.remove('navbar__color');
@@ -85,7 +109,7 @@ document.addEventListener('scroll', () => {
 
 // Handle scrolling when tapping on the navbar menu
 const navbarMenu = document.querySelector('.navbar__menu');
-navbarMenu.addEventListener('click', () => {
+navbarMenu.addEventListener('click', function () {
   const link = event.target.dataset.link;
   if (link == null) {
     return;
@@ -101,37 +125,37 @@ navbarMenu.addEventListener('click', () => {
 
 // Navbar toggle button for small screen
 const toggleBtn = document.querySelector('.navbar__toggle-btn');
-toggleBtn.addEventListener('click', () => {
+toggleBtn.addEventListener('click', function () {
   navbarMenu.classList.toggle('open');
-  if (window.scrollY < navbarHeight) {
+  if ((window.scrollY || window.pageYOffset) < navbarHeight) {
     //navbar.classList.toggle('navbar__color');
   }
 });
 
 // Handle click on "contact me" button on home
 const honeContactBtn = document.querySelector('.home__contact');
-honeContactBtn.addEventListener('click', () => {
+honeContactBtn.addEventListener('click', function () {
   scrollIntoView('#contact');
 });
 
 // Make home slowly fade to transparent as the window scrolls down
 const home = document.querySelector('.home__container');
 const homeHeight = home.getBoundingClientRect().height;
-document.addEventListener('scroll', () => {
-  home.style.opacity = 1 - window.scrollY / homeHeight;
+document.addEventListener('scroll', function () {
+  home.style.opacity = 1 - (window.scrollY || window.pageYOffset) / homeHeight;
 });
 
 // floating button
 const arrowUp = document.querySelector('#arrow-up');
-document.addEventListener('scroll', () => {
-  if (window.scrollY > homeHeight / 2) {
+document.addEventListener('scroll', function () {
+  if ((window.scrollY || window.pageYOffset) > homeHeight / 2) {
     arrowUp.classList.add('visible');
   } else {
     arrowUp.classList.remove('visible');
   }
 });
 
-arrowUp.addEventListener('click', () => {
+arrowUp.addEventListener('click', function () {
   scrollIntoView('#home');
 });
 
@@ -139,7 +163,7 @@ arrowUp.addEventListener('click', () => {
 const workBtnContainer = document.querySelector('.work__categories');
 const projectContainer = document.querySelector('.work__projects');
 const projects = document.querySelectorAll('.project');
-workBtnContainer.addEventListener('click', (e) => {
+workBtnContainer.addEventListener('click', function (e) {
   const filter = e.target.dataset.filter || e.target.parentNode.dataset.filter;
   if (filter == null) {
     return;
@@ -154,8 +178,8 @@ workBtnContainer.addEventListener('click', (e) => {
   target.classList.add('selected');
 
   projectContainer.classList.add('anim-out');
-  setTimeout(() => {
-    projects.forEach((project) => {
+  setTimeout(function () {
+    projects.forEach(function (project) {
       if (
         filter === '*' ||
         project.dataset.type === filter ||

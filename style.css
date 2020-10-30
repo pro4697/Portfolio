@@ -50,7 +50,7 @@ body {
 
 a {
   text-decoration: none;
-  color: var(--color-white);
+  color: #ffffff;
 }
 
 ul {
@@ -70,30 +70,30 @@ button {
 
 /* Typography */
 h1 {
-  font-size: var(--font-large);
-  font-weight: var(--weight-bold);
-  color: var(--color-black);
+  font-size: 48px;
+  font-weight: 700;
+  color: #000000;
   margin: 16px 0px;
 }
 
 h2 {
-  font-size: var(--font-medium);
-  font-weight: var(--weight-semi-bold);
-  color: var(--color-black);
+  font-size: 28px;
+  font-weight: 600;
+  color: #000000;
   margin: 8px 0;
 }
 
 h3 {
-  font-size: var(--font-regular);
-  font-weight: var(--weight-regular);
-  color: var(--color-black);
+  font-size: 18px;
+  font-weight: 400;
+  color: #000000;
   margin: 8px 0;
 }
 
 p {
-  font-size: var(--font-regular);
-  font-weight: var(--weight-regular);
-  color: var(--color-black);
+  font-size: 18px;
+  font-weight: 400;
+  color: #000000;
   margin: 4px 0;
 }
 
@@ -105,16 +105,16 @@ p {
   justify-content: space-between;
   background-color: transparent;
   align-items: center;
-  color: var(--color-white);
+  color: #ffffff;
   padding: 16px;
   height: 65px;
   z-index: 1;
-  transition: all var(--animation-duration-short) ease-in;
+  transition: all 220ms ease-in;
 }
 
 #navbar.navbar__color {
-  background-color: var(--color-blue);
-  transition: all var(--animation-duration-long) ease-in;
+  background-color: #34b8dd;
+  transition: all 500ms ease-in;
 }
 
 .navbar__menu {
@@ -123,8 +123,8 @@ p {
 
 .navbar__logo {
   z-index: 1;
-  font-size: var(--font-medium);
-  font-weight: var(--weight-semi-bold);
+  font-size: 28px;
+  font-weight: 600;
 }
 
 .navbar__menu__item {
@@ -136,17 +136,17 @@ p {
 }
 
 .navbar__menu__item:hover {
-  color: var(--color-black);
-  background-color: var(--color-light-white);
-  border: 1px solid var(--color-white);
-  border-radius: var(--size-border-radius);
+  color: #000000;
+  background-color: #eeeeee;
+  border: 1px solid #ffffff;
+  border-radius: 4px;
 }
 
 .navbar__toggle-btn {
   position: absolute;
   right: 32px;
   font-size: 24px;
-  color: var(--color-white);
+  color: #ffffff;
   display: none;
 }
 
@@ -162,27 +162,27 @@ p {
   width: 250px;
   height: 250px;
   border-radius: 50%;
-  border: 2px solid var(--color-light-white);
+  border: 2px solid #eeeeee;
 }
 
 .home__title,
 .home__description {
-  color: var(--color-white);
+  color: #ffffff;
 }
 .home__contact {
   user-select: none;
-  color: var(--color-white);
-  font-size: var(--font-regular);
+  color: #ffffff;
+  font-size: 18px;
   margin: 24px;
   padding: 8px 12px;
-  border: 2px solid var(--color-white);
-  border-radius: var(--size-border-radius);
+  border: 2px solid #ffffff;
+  border-radius: 4px;
 }
 
 .home__contact:hover {
-  color: var(--color-black);
-  border: 2px solid var(--color-white);
-  background-color: var(--color-white);
+  color: #000000;
+  border: 2px solid #ffffff;
+  background-color: #ffffff;
 }
 
 /* Section common */
@@ -207,31 +207,31 @@ p {
 .major__icon {
   width: 170px;
   height: 170px;
-  line-height: 170px;
+  line-height: 170px; 
   font-size: 70px;
   margin: auto;
-  color: var(--color-light-blue);
-  border: 1px solid var(--color-light-blue);
+  color: #73aace;
+  border: 1px solid #73aace;
   border-radius: 50%;
   margin-bottom: 16px;
 }
 
 .major__icon i {
-  transition: all var(--animation-duration-short) ease;
+  transition: all 220ms ease;
 }
 
 .major__icon:hover i {
-  color: var(--color-pink);
+  color: #fe918d;
   transform: rotate(-30deg) scale(1.1);
 }
 
 .major__title,
 .major__description {
-  color: var(--color-dark-grey);
+  color: #4d4d4d;
 }
 
 .major__description {
-  font-size: var(--font-small);
+  font-size: 16px;
 }
 
 .job {
@@ -246,36 +246,36 @@ p {
 
 .job__name,
 .job__period {
-  color: var(--color-light-grey);
+  color: #7c7979;
 }
 
 .job__name {
-  font-size: var(--font-small);
+  font-size: 16px;
 }
 
 .job__period {
-  font-size: var(--font-micro);
+  font-size: 14px;
 }
 
 /* Skill */
 #skills {
-  background-color: var(--color-yellow);
+  background-color: #fff7d1;
 }
 
 .skillset {
   display: flex;
-  background-color: var(--color-light-grey);
-  color: var(--color-light-white);
+  background-color: #7c7979;
+  color: #eeeeee;
   margin: 20px 0;
 }
 
 .skillset__title {
-  color: var(--color-white);
+  color: #ffffff;
 }
 
 .skillset__left {
   flex-basis: 60%;
-  background-color: var(--color-dark-grey);
+  background-color: #4d4d4d;
   padding: 20px;
 }
 
@@ -291,12 +291,12 @@ p {
 .skill__bar {
   width: 100%;
   height: 3px;
-  background-color: var(--color-grey);
+  background-color: #616161;
 }
 
 .skill__value {
   height: 3px;
-  background-color: var(--color-orange);
+  background-color: #feb546;
 }
 
 .skillset__right {
@@ -304,7 +304,7 @@ p {
 }
 
 .tools {
-  background-color: var(--color-grey);
+  background-color: #616161;
 }
 
 .tools,
@@ -318,17 +318,17 @@ p {
 }
 
 .category__btn {
-  border: 1px solid var(--color-dark-white);
-  border-radius: var(--size-border-radius);
-  font-size: var(--font-regular);
+  border: 1px solid #bdbdbd;
+  border-radius: 4px;
+  font-size: 18px;
   padding: 8px 36px;
   position: relative;
 }
 
 .category__btn.selected,
 .category__btn:hover {
-  background-color: var(--color-light-blue);
-  color: var(--color-white);
+  background-color: #73aace;
+  color: #ffffff;
 }
 
 .category__btn.selected .category__count,
@@ -338,9 +338,9 @@ p {
 }
 
 .category__count {
-  background-color: var(--color-orange);
+  background-color: #feb546;
   border-radius: 50%;
-  color: var(--color-white);
+  color: #ffffff;
   width: 24px;
   height: 24px;
   line-height: 24px;
@@ -349,7 +349,7 @@ p {
   top: 6px;
   right: -20px;
   opacity: 0;
-  transition: all var(--animation-duration-short) ease-out;
+  transition: all 220ms ease-out;
 }
 
 .work__projects {
@@ -357,7 +357,7 @@ p {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  transition: all var(--animation-duration-short) ease-out;
+  transition: all 220ms ease-out;
 }
 
 .work__projects.anim-out {
@@ -373,20 +373,20 @@ p {
   width: 375px;
   height: 250px;
   margin: 5px;
-  background-color: var(--color-light-white);
+  background-color: #eeeeee;
 }
 .project.invisible {
   display: none;
 }
 
 .project__img {
-  max-width: 100%;
+  width: 100%;
   max-height: 100%;
 }
 
 .project__description {
   position: absolute;
-  color: var(--color-white);
+  color: #ffffff;
   background-color: black;
   display: flex;
   flex-direction: column;
@@ -397,7 +397,7 @@ p {
   left: 0;
   opacity: 0;
   transform: translateY(10px);
-  transition: all var(--animation-duration-short);
+  transition: all 220ms;
 }
 
 .project:hover .project__description {
@@ -406,7 +406,7 @@ p {
 }
 
 .project__description h3 {
-  color: var(--color-orange);
+  color: #feb546;
 }
 
 .project__description h3:after {
@@ -418,7 +418,7 @@ p {
   height: 2px;
   transform: translateX(-50%);
   margin-top: 8px;
-  background-color: var(--color-dark-white);
+  background-color: #bdbdbd;
 }
 
 .project__git {
@@ -426,11 +426,11 @@ p {
   bottom: 10px;
   left: 15px;
   font-size: 25px;
-  transition: var(--animation-duration-short);
+  transition: 220ms;
 }
 
 .project__git:hover {
-  color: var(--color-orange);
+  color: #feb546;
 }
 
 .project__demo {
@@ -438,11 +438,11 @@ p {
   bottom: 10px;
   right: 15px;
   font-size: 25px;
-  transition: var(--animation-duration-short);
+  transition: 220ms;
 }
 
 .project__demo:hover {
-  color: var(--color-orange);
+  color: #feb546;
 }
 
 .project__icon-name {
@@ -453,7 +453,7 @@ p {
 
 /* Testimonial */
 #testimonials {
-  background-color: var(--color-light-white);
+  background-color: #eeeeee;
 }
 
 .testimonials {
@@ -482,16 +482,16 @@ p {
 
 .testimonial__speech-bubble {
   padding: 18px;
-  background-color: var(--color-white);
-  border-radius: var(--size-border-radius);
+  background-color: #ffffff;
+  border-radius: 4px;
 }
 
 .testimonial__speech-bubble p {
-  color: var(--color-light-grey);
+  color: #7c7979;
 }
 
 .testimonial__speech-bubble a {
-  color: var(--color-light-blue);
+  color: #73aace;
 }
 
 /* Contact */
@@ -502,7 +502,7 @@ p {
 .contact__title,
 .contact__email,
 .contact__rights {
-  color: var(--color-white);
+  color: #ffffff;
 }
 
 .contact__title {
@@ -510,17 +510,17 @@ p {
 }
 
 .contact__links {
-  font-size: var(--font-large);
+  font-size: 48px;
   margin: 24px 0;
 }
 
 .contact__links i {
-  transition: all var(--animation-duration-short) ease-in;
+  transition: all 220ms ease-in;
 }
 
 .contact__links i:hover {
   transform: scale(1.2);
-  color: var(--color-light-grey);
+  color: #7c7979;
 }
 
 /* Arrow up */
@@ -534,17 +534,17 @@ p {
   right: 35px;
   padding-top: 10px;
   text-align: center;
-  font-size: var(--font-medium);
+  font-size: 28px;
   border-radius: 50%;
-  color: var(--color-white);
-  background-color: var(--color-blue);
-  transition: all var(--animation-duration-long) ease;
+  color: #ffffff;
+  background-color: #34b8dd;
+  transition: all 500ms ease;
 }
 
 #arrow-up.visible {
   bottom: 35px;
   opacity: 1;
-  transition: all var(--animation-duration-long) ease;
+  transition: all 500ms ease;
 }
 
 /* For below 768px screen width */
@@ -581,8 +581,8 @@ p {
     padding: 55px;
     top: 0px;
     height: 300px;
-    background-color: var(--color-blue);
-    transition: all var(--animation-duration-short) ease-out;
+    background-color: #34b8dd;
+    transition: all 220ms ease-out;
   }
   .navbar__menu__item {
     margin: auto;
@@ -595,7 +595,7 @@ p {
     right: 16px;
     transform: translateY(-10%);
     font-size: 20px;
-    color: var(--color-white);
+    color: #ffffff;
   }
 
   .section {
@@ -607,7 +607,7 @@ p {
     width: 220px;
     height: 220px;
     border-radius: 50%;
-    border: 2px solid var(--color-light-white);
+    border: 2px solid #eeeeee;
   }
 
   .about__majors {
@@ -638,7 +638,7 @@ p {
     transform: translateY(150%);
     left: 0;
     opacity: 0.8;
-    transition: all var(--animation-duration-short);
+    transition: all 220ms;
   }
 
   .project:hover .project__description {
@@ -646,7 +646,7 @@ p {
   }
 
   .project__description h3 {
-    color: var(--color-orange);
+    color: #feb546;
   }
 
   .project__git {
