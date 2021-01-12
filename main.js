@@ -24,7 +24,7 @@ const wl = [
 		git: 'https://github.com/pro4697/chat-app',
 		type: '*',
 		img: 'Chat-App.png',
-		description: 'jQuery, PHP, phpMyAdmin, Crawling,<br />PG결제, QRcode reader',
+		description: 'React.js, Firebase',
 	},
 	{
 		name: '모바일 식권 시스템',
